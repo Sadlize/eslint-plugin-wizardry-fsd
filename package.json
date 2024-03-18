@@ -1,0 +1,34 @@
+{
+  "name": "eslint-plugin-wizardry-fsd",
+  "version": "0.0.1",
+  "description": "Plugin for checking imports path in FSD project",
+  "repository": "https://github.com/Sadlize/eslint-plugin-wizardry-fsd",
+  "homepage": "https://github.com/Sadlize/eslint-plugin-wizardry-fsd#readme",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "fsd",
+    "feature-sliced",
+    "feature-sliced design"
+  ],
+  "author": "Alexey Pautov-Brevnov <alexey.pautovbrevnov@gmail.com>",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "exports": "./lib/index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "micromatch": "4.0.5",
+    "requireindex": "1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "8.57.0",
+    "eslint-plugin-eslint-plugin": "5.4.0",
+    "eslint-plugin-node": "11.1.0"
+  },
+  "engines": {
+    "node": "^14.17.0 || ^16.0.0 || ^17.0.0 || >= 18.0.0"
+  }
+}

@@ -137,33 +137,6 @@ npm i -D eslint eslint-plugin-wizardy-fsd
 
 ### Common options for all rules
 
-- `alias`
-  ```json
-  {
-    "rules": {
-      "wizardry-fsd/slice-relative-path": [
-        "error",
-        {
-          "alias": "@"
-        }
-      ]
-    }
-  }
-  ```
-  But personally, I prefer to add this to tsconfig.json
-  ```json
-  {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"],
-      "*": ["./src/*"]
-    }
-  }
-  ```
-  And import without aliases
-  ```js
-  import { CoolFeature } from 'features/your-cool-feature';
-  ```
 - `pagesFolderRename` Useful when we can't use the default folder name for example due to framework limitations like in
   Next.js\
   **Default: "pages"**
@@ -236,7 +209,6 @@ npm i -D eslint eslint-plugin-wizardy-fsd
     "wizardry-fsd/complex": [
       "error",
       {
-        "alias": "@",
         "pagesFolderRename": "views",
         "entitiesCrossImport": true,
         "sharedImportFromAny": true,
@@ -313,14 +285,12 @@ Then configure the rules you want to use under the rules section.
     "wizardry-fsd/slice-relative-path": [
       "error",
       {
-        "alias": "@",
         "pagesFolderRename": "views"
       }
     ],
     "wizardry-fsd/layer-imports": [
       "error",
       {
-        "alias": "@",
         "pagesFolderRename": "views",
         "ignoreImportPatterns": ["**/StoreProvider", "**/*.test.*"],
         "entitiesCrossImport": true
@@ -329,7 +299,6 @@ Then configure the rules you want to use under the rules section.
     "wizardry-fsd/public-api-imports": [
       "error",
       {
-        "alias": "@",
         "pagesFolderRename": "views",
         "sharedImportFromAny": true
       }

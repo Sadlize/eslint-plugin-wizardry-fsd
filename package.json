@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-wizardry-fsd",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Plugin for checking imports path in FSD project",
   "repository": "https://github.com/Sadlize/eslint-plugin-wizardry-fsd",
   "homepage": "https://github.com/Sadlize/eslint-plugin-wizardry-fsd#readme",

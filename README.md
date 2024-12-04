@@ -1,5 +1,8 @@
 # eslint-plugin-wizardry-fsd
 
+> [!NOTE]
+> It is better to use the official FSD linter called [Steiger](https://github.com/feature-sliced/steiger) with many different rules. Install the plugin only if you need Eslint checks or renaming of pages folder.
+
 > `WIP:` Use with caution, the project may not be properly tested.
 
 Plugin for checking import paths in [FSD](https://feature-sliced.design/) project.
@@ -226,6 +229,8 @@ npm i -D eslint eslint-plugin-wizardy-fsd
 To use pre-built configurations, you need to add one of the following line to extends:
 
 - `default`
+  
+  Eslint 8
   ```json
   {
     "extends": ["plugin:wizardry-fsd/default"]
@@ -245,6 +250,7 @@ To use pre-built configurations, you need to add one of the following line to ex
     }
   }
   ```
+
 - `next`
   ```json
   {
@@ -267,14 +273,43 @@ To use pre-built configurations, you need to add one of the following line to ex
   }
   ```
 
+  Eslint 9
+
+  ```js
+  import wizardryFsd from 'eslint-plugin-wizardry-fsd';
+    
+  const config = [
+    wizardryFsd.configs.flat.default,
+  ];
+    
+  export default config;
+  ```
+
+
 ### Manual
 
 Add `wizardy-fsd` to the plugins section of your `.eslintrc` configuration file:
 
+Eslint 8
 ```json
 {
   "plugins": ["wizardy-fsd"]
 }
+```
+Eslint 9
+```js
+import wizardryFsd from 'eslint-plugin-wizardry-fsd';
+
+const config = [
+  {
+    plugins: { 
+      'wizardry-fsd': wizardryFsd
+    },
+  },
+];
+
+export default config;
+
 ```
 
 Then configure the rules you want to use under the rules section.
